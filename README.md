@@ -1,0 +1,117 @@
+# King of Fighters Clone
+
+A 2D fighting game inspired by the classic King of Fighters series, built with Python and Pygame.
+
+## Features
+
+- **Character Selection**: Choose from 4 unique fighters (Kyo, Iori, Mai, Ryo)
+- **Fighting Mechanics**: 
+  - Light Punch and Kick attacks
+  - Special moves with higher damage
+  - Blocking system to reduce damage
+  - Combo multipliers for consecutive hits
+- **Physics System**: Jump mechanics with gravity
+- **Energy System**: Attacks consume energy that regenerates over time
+- **Health System**: Each character has 100 HP (varies by character)
+- **AI-Free**: Local 2-player only (no AI opponent)
+
+## Game Controls
+
+### Character Selection Screen
+- **Player 1**: Press `A` and `D` to move left/right
+- **Player 2**: Press Arrow Keys `←` and `→` to move left/right
+- **Start Game**: Press `ENTER` to begin the match
+
+### During Fight
+
+**Player 1 Controls:**
+- `A` - Move Left
+- `D` - Move Right
+- `W` - Jump
+- `Q` - Punch (5 damage, costs 10 energy)
+- `E` - Kick (10 damage, costs 15 energy)
+- `R` - Special Attack (25 damage, costs 40 energy)
+- `Left Ctrl` - Block (reduces incoming damage by 50%)
+- `ESC` - Quit Game
+
+**Player 2 Controls:**
+- `←` Arrow - Move Left
+- `→` Arrow - Move Right
+- `↑` Arrow - Jump
+- `U` - Punch (5 damage, costs 10 energy)
+- `I` - Kick (10 damage, costs 15 energy)
+- `O` - Special Attack (25 damage, costs 40 energy)
+- `Right Ctrl` - Block (reduces incoming damage by 50%)
+
+### Game Over
+- Press `ENTER` to return to character selection
+
+## Character Stats
+
+| Character | HP | Speed | Jump |
+|-----------|----|----|------|
+| **Kyo** | 100 | 5.0 | Balanced |
+| **Iori** | 95 | 5.5 | Short |
+| **Mai** | 85 | 6.0 | High |
+| **Ryo** | 110 | 4.5 | Low |
+
+## Combat System
+
+### Damage Calculation
+- Base damage varies by attack type
+- Combo bonus: Each consecutive hit increases damage by 10%
+- Blocking reduces incoming damage by 50%
+
+### Attack Range
+- Punch: 80 pixels
+- Kick: 120 pixels
+- Special: 150 pixels
+
+## Installation
+
+### Requirements
+- Python 3.8 or higher
+- pygame-ce (or pygame)
+
+### Setup
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the game
+python main.py
+```
+
+## File Structure
+
+- `main.py` - Game entry point and main loop
+- `game.py` - Game state management and rendering
+- `character.py` - Character class and mechanics
+- `constants.py` - Game constants and configuration
+
+## Tips for Playing
+
+1. **Energy Management**: Don't spam attacks - manage your energy for strategic special moves
+2. **Blocking**: Hold the block button to reduce incoming damage
+3. **Combos**: Chain consecutive hits to multiply damage
+4. **Spacing**: Use movement and spacing to avoid opponent attacks
+5. **Range**: Different attacks have different ranges - use them strategically
+
+## Future Improvements
+
+- AI opponent
+- More characters with unique move sets
+- Sound effects and music
+- Particle effects for impacts
+- Tournament mode
+- Replay system
+- Fullscreen support
+- Controller support
+
+## License
+
+This is a fan-made educational project.
+
+---
+
+**Enjoy the fight!** 🥋
